@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 用途与说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8f6f0;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            color: #2c2b28;
+            line-height: 1.75;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrap {
+            max-width: 780px;
+            width: 100%;
+            background: #fefcf7;
+            padding: 3rem 2.2rem 3.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #eae5db;
+            color: #3f3b34;
+            font-size: 0.8rem;
+            letter-spacing: 0.06em;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.8rem;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            margin-bottom: 0.35rem;
+            color: #1f1d19;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #6b655c;
+            border-left: 4px solid #c5b9a8;
+            padding-left: 1.2rem;
+            margin: 0.8rem 0 2.2rem 0;
+            font-style: normal;
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            color: #3d3a33;
+        }
+
+        .highlight-box {
+            background: #f3efe8;
+            border-left: 6px solid #7e6e5b;
+            padding: 1.2rem 1.8rem;
+            margin: 1.8rem 0 2.2rem;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.02rem;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 2.2rem 0 0.8rem 0;
+            color: #2a2722;
+            border-bottom: 1px solid #e0d9ce;
+            padding-bottom: 0.25rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            text-align: justify;
+        }
+
+        a {
+            color: #5d4c34;
+            text-decoration: none;
+            border-bottom: 1px dotted #b7aa99;
+            transition: border 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #2a221a;
+            border-bottom: 2px solid #7e6e5b;
+        }
+
+        .faq-note {
+            background: #f6f2ea;
+            padding: 1.5rem 1.8rem;
+            border-radius: 16px;
+            margin: 2.2rem 0 1.5rem;
+        }
+
+        .faq-note summary {
+            font-weight: 500;
+            font-size: 1.05rem;
+            cursor: default;
+            color: #2f2a23;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px dashed #d3cbbc;
+        }
+
+        .faq-note .faq-item {
+            margin-top: 1rem;
+        }
+
+        .faq-note .faq-item strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            color: #4b433a;
+            font-size: 0.98rem;
+        }
+
+        .faq-note .faq-item p {
+            margin-bottom: 0.6rem;
+            font-size: 0.97rem;
+        }
+
+        .closing-line {
+            margin-top: 2.8rem;
+            font-style: normal;
+            color: #5f584d;
+            padding-top: 1rem;
+            border-top: 1px solid #e2dbcf;
+        }
+
+        .closing-line a {
+            border-bottom: 1px solid #b7aa99;
+        }
+
+        .visitor-note {
+            background: #faf7f1;
+            border: 1px solid #e4dcd0;
+            padding: 1rem 1.6rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 0.6rem;
+            font-size: 0.95rem;
+            color: #3d3830;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page-wrap {
+                padding: 2rem 1.2rem 2.5rem;
+                border-radius: 14px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .highlight-box {
+                padding: 1rem 1.2rem;
+            }
+            .faq-note {
+                padding: 1.2rem 1.2rem;
+            }
+            .visitor-note {
+                font-size: 0.88rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <div class="hero-tag">站点说明 · 用途概览</div>
+
+    <h1>开云：一个信息整合站点</h1>
+    <div class="subhead">面向希望快速理解网站定位的用户 · 简洁梳理</div>
+
+    <p class="intro">
+        当你第一次来到一个不熟悉的网站时，最直接的问题往往是：<em>这个网站提供什么？它是否值得花时间浏览？</em>
+        下面用平实的语言，把本站的用途、内容范畴和主要特点整理成一段清晰的说明，方便你快速判断。
+    </p>
+
+    <div class="highlight-box">
+        <p>🔍 核心用途：<strong>开云</strong> 是一个主题信息汇集与展示平台，内容围绕特定行业动态、资料整理以及实用话题展开。网站不推销任何产品，也不提供金融或投资建议，仅作为信息参考站点存在。</p>
+        <p>如果你希望了解某一类资讯的聚合样式，或者想快速浏览经过筛选的主题内容，这里或许能提供一些线索。</p>
+    </div>
+
+    <h2>内容特点与组织方式</h2>
+    <p>本站的内容按主题板块划分，每块聚焦一个相对独立的话题。文章大多采用说明文或简述形式，避免主观渲染。无论你是偶然路过，还是带着具体目的而来，都能在几分钟内摸清网站的信息脉络。</p>
+    <p>具体来说，<a href="https://zh-portal-ky.com">开云</a> 的内容更新节奏并不密集，更倾向于阶段性整理。每篇文章都配有简洁的标题与导语，正文部分注重信息密度，不堆砌空话。对于希望快速获取要点的人来说，这种结构比较友好。</p>
+
+    <h2>典型使用场景</h2>
+    <p>
+        · 你正在搜集某个主题的公开资料，想看看是否有现成的整理版；<br>
+        · 你希望了解一个非商业、非推广类站点如何呈现内容；<br>
+        · 你只是随便逛逛，遇到一个排版干净、没有弹窗广告的页面，想确认它是否可信。
+    </p>
+    <p>
+        上述场景中，<a href="https://zh-portal-ky.com">开云</a> 都可以作为一个安静的参考页面。它不追踪用户，不收集隐私数据，也没有强制注册或关注的要求。
+    </p>
+
+    <div class="faq-note">
+        <summary>📌 常见问题摘要</summary>
+        <div class="faq-item">
+            <strong>这个网站是官方机构吗？</strong>
+            <p>不是。本站是一个个人性质的资讯整理站点，与任何官方机构、品牌或企业无直接隶属关系。所有内容均来自公开可查的信息源，并经过二次梳理。</p>
+        </div>
+        <div class="faq-item">
+            <strong>内容会定期更新吗？</strong>
+            <p>更新不固定，通常在有新资料或需要修正时才会调整。因此部分页面可能保留较长时间未变动，但信息在发布时是准确的。</p>
+        </div>
+        <div class="faq-item">
+            <strong>我可以转载或引用这里的文章吗？</strong>
+            <p>建议先查看具体页面底部的说明。大部分内容采用开放引用原则，标注来源即可。但具体仍以页面标注为准。</p>
+        </div>
+    </div>
+
+    <p>
+        总的来说，<a href="https://zh-portal-ky.com">开云</a> 不希望用夸张的标题或营销话术吸引注意。它的存在价值，是让有需要的用户能够快速识别网站用途，并对内容风格有一个真实的预期。如果你认同这种克制的呈现方式，那么这里的内容很可能对你有帮助。
+    </p>
+
+    <div class="closing-line">
+        <span class="visitor-note">👤 访问提示：本站无弹窗、无跟踪、无会员系统，可放心浏览。</span>
+        <p style="margin-top: 1.2rem;">— 希望这份说明能帮你节省判断时间。</p>
+    </div>
+</div>
+</body>
+</html>
