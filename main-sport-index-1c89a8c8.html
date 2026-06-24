@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于爱游戏 – 站点信息与知识库</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f8f6f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', sans-serif;
+            color: #2c2c2c;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .page-wrap {
+            max-width: 960px;
+            width: 92%;
+            margin: 0 auto;
+            padding: 2.8rem 0 3.5rem;
+        }
+        /* 目录感布局 —— 卡片式模块标题 */
+        .module-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #3e3a33;
+            border-left: 4px solid #b0a088;
+            padding-left: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+        .section-card {
+            background: white;
+            border-radius: 14px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 6px 20px rgba(0,0,0,0.04);
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s ease;
+            border: 1px solid #edeae2;
+        }
+        .section-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 10px 28px rgba(0,0,0,0.06);
+        }
+        .hero-tagline {
+            background: #eae7dd;
+            border-radius: 10px;
+            padding: 2.2rem 2rem;
+            margin-bottom: 2.4rem;
+            text-align: center;
+            border: 1px solid #ddd6c8;
+        }
+        .hero-tagline h1 {
+            font-size: 2rem;
+            font-weight: 550;
+            color: #2f2a23;
+            margin-bottom: 0.3rem;
+        }
+        .hero-tagline p {
+            font-size: 1rem;
+            color: #5a5449;
+            max-width: 640px;
+            margin: 0.5rem auto 0;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        .desc-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            padding: 0.45rem 0;
+            border-bottom: 1px dashed #e2ddd2;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            min-width: 90px;
+            font-weight: 500;
+            color: #5f584c;
+        }
+        .info-value {
+            color: #2f2a23;
+        }
+        .quote-box {
+            background: #f0ede6;
+            border-left: 4px solid #b8a78c;
+            padding: 1rem 1.5rem;
+            margin: 1.4rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: normal;
+            color: #3e392f;
+        }
+        .quote-box p {
+            margin-bottom: 0.3rem;
+        }
+        .tip-block {
+            background: #f2efe7;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            gap: 0.7rem;
+            align-items: flex-start;
+            margin: 1rem 0 1.4rem;
+            border: 1px solid #e3ddd0;
+        }
+        .tip-icon {
+            font-size: 1.3rem;
+            line-height: 1.4;
+            flex-shrink: 0;
+        }
+        .tip-content {
+            flex: 1;
+        }
+        .faq-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee9e0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #3e372e;
+            margin-bottom: 0.2rem;
+        }
+        .faq-a {
+            color: #4f4940;
+        }
+        .link-inline {
+            color: #6f5e45;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #c9bca8;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .link-inline:hover {
+            color: #3f3324;
+            border-bottom-color: #6f5e45;
+        }
+        .footer-note {
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e1dbcf;
+            font-size: 0.85rem;
+            color: #6f685c;
+            text-align: center;
+        }
+        @media (max-width: 640px) {
+            .page-wrap {
+                width: 94%;
+                padding: 1.8rem 0 2.5rem;
+            }
+            .section-card {
+                padding: 1.3rem 1.2rem;
+            }
+            .hero-tagline {
+                padding: 1.5rem 1rem;
+            }
+            .hero-tagline h1 {
+                font-size: 1.6rem;
+            }
+            .info-label {
+                min-width: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+
+        <!-- 标题区 / 简单介绍 -->
+        <div class="hero-tagline">
+            <h1>关于爱游戏 · 信息指引</h1>
+            <p>站点定位、背景说明与常见问题摘要 —— 面向认真了解的用户</p>
+        </div>
+
+        <!-- 卡片1：站点概要 + 可信说明 -->
+        <div class="section-card">
+            <div class="module-title">站点概要</div>
+            <div class="desc-grid">
+                <div class="info-row">
+                    <span class="info-label">网站名称</span>
+                    <span class="info-value">爱游戏</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">主域名</span>
+                    <span class="info-value">main-sport-igame.com</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">主要语言</span>
+                    <span class="info-value">中文</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">内容方向</span>
+                    <span class="info-value">体育游戏、休闲竞技与相关资讯</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">页面性质</span>
+                    <span class="info-value">知识库式介绍页 · 非商业推广</span>
+                </div>
+            </div>
+            <div class="quote-box">
+                <p>本站为独立信息页面，提供关于 <a href="https://main-sport-igame.com" class="link-inline">爱游戏</a> 的客观说明与资源索引。内容经过整理，力求准确清晰，不包含虚假陈述或诱导行为。</p>
+            </div>
+        </div>
+
+        <!-- 卡片2：说明区 —— 背景与用途 -->
+        <div class="section-card">
+            <div class="module-title">背景与用途说明</div>
+            <p>「爱游戏」是一个以体育类游戏和休闲互动为主要关注点的网络站点。其内容覆盖常见的球类模拟、运动竞技、策略养成等品类，同时也提供部分游戏资讯和基础指引。该站点面向对体育游戏有兴趣的普通用户，不涉及金融、博彩或任何违法违规业务。</p>
+            <p>从结构上看，主站采用较为简洁的页面布局，注重信息可读性。本次介绍页即作为独立的知识库入口，帮助新访客快速了解站点轮廓、定位以及常见疑问。</p>
+            <div class="tip-block">
+                <span class="tip-icon">📌</span>
+                <div class="tip-content">
+                    <strong>提示：</strong> 如果你对体育竞技类游戏有好奇心，或想了解某个品类的基本情况，可以浏览 <a href="https://main-sport-igame.com" class="link-inline">爱游戏</a> 上整理的内容。建议通过站内导航或分类标签进一步查阅。
+                </div>
+            </div>
+        </div>
+
+        <!-- 卡片3：相关信息区 —— 属性和场景 -->
+        <div class="section-card">
+            <div class="module-title">相关信息 · 适用场景</div>
+            <p>以下列举了一些与「爱游戏」相关的常见属性及可能的使用情景，供参考：</p>
+            <ul style="padding-left: 1.2rem; margin: 0.8rem 0 1.2rem; list-style: disc; color: #3e392f;">
+                <li>了解体育游戏的基本分类（足球、篮球、网球、赛车等）</li>
+                <li>寻找某类运动游戏的简要介绍或玩法说明</li>
+                <li>浏览游戏相关的活动资讯或更新动态</li>
+                <li>作为游戏爱好者之间交流的参考信息源</li>
+            </ul>
+            <p>需要注意的是，站点内容会随着时间调整，建议以最新页面为准。任何具体游戏规则或数据请以官方来源作最终核实。</p>
+        </div>
+
+        <!-- 卡片4：FAQ 摘要 + 提示区 -->
+        <div class="section-card">
+            <div class="module-title">常见问题摘要</div>
+            <div class="faq-item">
+                <div class="faq-q">Q：爱游戏 主要提供什么内容？</div>
+                <div class="faq-a">A：以体育游戏和竞技休闲类内容为主，包括游戏介绍、资讯整理以及部分指引性文章。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：这个介绍页和主站是什么关系？</div>
+                <div class="faq-a">A：本页是独立的知识库式入口页面，用于概要说明站点信息，不属于主站的直接子页面。你可以通过链接访问主站 <a href="https://main-sport-igame.com" class="link-inline">爱游戏</a> 查看更多。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：信息准确吗？多久更新？</div>
+                <div class="faq-a">A：页面内容会尽量保持准确，但无法保证绝对实时。建议结合主站当前版本阅读。如有重大变动，本介绍页也会相应调整。</div>
+            </div>
+            <div class="tip-block" style="margin-top: 1.2rem;">
+                <span class="tip-icon">💡</span>
+                <div class="tip-content">
+                    <strong>补充提示：</strong> 如果你对某个具体游戏品类有疑问，可以尝试在 <a href="https://main-sport-igame.com" class="link-inline">爱游戏</a> 站内使用搜索功能，或浏览分类栏目。本站不对特定游戏效果做任何保证。
+                </div>
+            </div>
+        </div>
+
+        <!-- 尾部 -->
+        <div class="footer-note">
+            <span>知识库入口 · 爱游戏 介绍页 ｜ 内容仅作参考</span>
+        </div>
+
+    </div>
+</body>
+</html>
