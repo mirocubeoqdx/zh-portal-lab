@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 – 移动端游戏聚合平台 | 快速识别与直达</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1e1e2a;
+            background: #f5f7fc;
+        }
+        /* 深色头图 – hero */
+        .hero {
+            background: linear-gradient(135deg, #0b0d17 0%, #1f2336 100%);
+            color: #eef0f6;
+            padding: 4rem 1.8rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: #f5f7fc;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #f0eaff, #c9d6ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 680px;
+            margin: 0 auto 1.8rem;
+            opacity: 0.85;
+            font-weight: 350;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 0.4rem 1.4rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #bcc6f0;
+            backdrop-filter: blur(2px);
+        }
+        /* 内容区 – 浅色 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.8rem 4rem;
+        }
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 550;
+            margin: 3rem 0 1.2rem;
+            color: #12131c;
+            border-left: 5px solid #3b4fce;
+            padding-left: 1rem;
+        }
+        .section-title:first-of-type {
+            margin-top: 0.5rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.8rem 0;
+        }
+        .card {
+            background: white;
+            border-radius: 22px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.02);
+            transition: all 0.15s ease;
+            border: 1px solid #eaeef8;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #b4c2f0;
+            box-shadow: 0 12px 28px rgba(59, 79, 206, 0.08);
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 550;
+            margin-bottom: 0.5rem;
+            color: #1e2238;
+        }
+        .card p, .card li {
+            color: #3b4058;
+            font-size: 0.98rem;
+        }
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .card li {
+            padding: 0.3rem 0;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .card li::before {
+            content: "▹";
+            color: #3b4fce;
+            font-weight: 600;
+        }
+        .inline-link {
+            color: #2a3cb0;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .inline-link:hover {
+            color: #182484;
+            border-bottom: 1px solid #2a3cb0;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 18px;
+            padding: 1.2rem 1.6rem;
+            margin-bottom: 0.8rem;
+            border-left: 4px solid #d0d8f0;
+        }
+        .faq-item strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-weight: 580;
+            color: #0b0f26;
+        }
+        .faq-item p {
+            color: #2f334d;
+            font-size: 0.95rem;
+        }
+        .footnote {
+            margin: 3.5rem 0 1rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #d4dcee;
+            font-size: 0.9rem;
+            color: #4d5370;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+        .footnote a {
+            color: #2a3cb0;
+            text-decoration: none;
+            border-bottom: 1px dotted #b0bde0;
+        }
+        .footnote a:hover {
+            border-bottom: 1px solid #2a3cb0;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .grid-2 { grid-template-columns: 1fr; gap: 1.2rem; }
+            .container { padding: 1.5rem 1rem 3rem; }
+            .section-title { font-size: 1.4rem; }
+            .footnote { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-tag">移动端 · 游戏聚合 · 快速识别</div>
+    <h1>爱游戏：一眼识别用途，直达内容</h1>
+    <p>如果你正在寻找一个集中展示移动端游戏资源、资讯与工具的平台，<a href="https://main-mobile-igame.com" class="inline-link" style="color:#bcc8ff; border-bottom:1px solid #5b6fd0;">爱游戏</a> 正为此设计。<br>没有多余装饰，从首页即可判断网站核心方向。</p>
+</section>
+
+<div class="container">
+
+    <!-- 优势区：为什么选择这个平台 -->
+    <h2 class="section-title">优势 · 信息优先</h2>
+    <div class="grid-2">
+        <div class="card">
+            <h3>结构清晰，一眼识别</h3>
+            <p>页面围绕「游戏分类」「热门推荐」「实用工具」三大模块布局，用户打开即能判断网站用途，无需二次摸索。</p>
+        </div>
+        <div class="card">
+            <h3>移动端优先</h3>
+            <p>所有内容均针对手机与平板屏幕优化，触控友好，加载轻量。你可以在任何设备上快速浏览。</p>
+        </div>
+        <div class="card">
+            <h3>资讯与资源聚合</h3>
+            <p>汇集近期游戏动态、版本更新、活动提醒，同时提供安全下载引导，减少多个站点切换的麻烦。</p>
+        </div>
+        <div class="card">
+            <h3>低干扰阅读</h3>
+            <p>界面克制，不滥用弹窗或诱导按钮。强调色仅用于链接与关键标识，帮助用户聚焦有效信息。</p>
+        </div>
+    </div>
+
+    <!-- 说明区：典型使用场景 -->
+    <h2 class="section-title">适用场景与说明</h2>
+    <p style="margin-bottom:1.2rem; color:#2d3148;">无论你是想快速了解某款手游的最新活动，还是需要为日常游戏寻找稳定信息源，<a href="https://main-mobile-igame.com" class="inline-link">爱游戏</a> 都尝试提供一种直接且可靠的入口。</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0;">
+        <span style="background:#e6ebf9; padding:0.3rem 1.2rem; border-radius:30px; font-size:0.9rem; color:#1f2766;">🎮 查看游戏资料</span>
+        <span style="background:#e6ebf9; padding:0.3rem 1.2rem; border-radius:30px; font-size:0.9rem; color:#1f2766;">📰 阅读版本动态</span>
+        <span style="background:#e6ebf9; padding:0.3rem 1.2rem; border-radius:30px; font-size:0.9rem; color:#1f2766;">🔍 发现同类推荐</span>
+        <span style="background:#e6ebf9; padding:0.3rem 1.2rem; border-radius:30px; font-size:0.9rem; color:#1f2766;">📌 保存常用入口</span>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <h2 class="section-title">常见疑问摘要</h2>
+    <div class="faq-item">
+        <strong>这个网站主要提供什么？</strong>
+        <p>爱游戏是一个移动端游戏信息聚合站，重点展示游戏分类、热门推荐及实用工具，帮助用户快速识别网站用途并获取内容。</p>
+    </div>
+    <div class="faq-item">
+        <strong>是否需要注册或付费？</strong>
+        <p>平台本身不强制注册，大部分浏览与信息查阅均可直接使用。部分下载或工具引导可能跳转至外部来源，以页面标注为准。</p>
+    </div>
+    <div class="faq-item">
+        <strong>内容更新频率如何？</strong>
+        <p>游戏资讯和推荐列表会跟随市场动态进行定期刷新，确保信息具有一定时效性。你可以将 <a href="https://main-mobile-igame.com" class="inline-link">爱游戏</a> 加入书签以便回访。</p>
+    </div>
+
+    <!-- 底部链接 / 额外导航 -->
+    <div class="footnote">
+        <span>© 爱游戏 · 简洁信息聚合</span>
+        <span>
+            <a href="https://main-mobile-igame.com">爱游戏</a> 
+            <span style="margin:0 0.6rem; color:#b5bedb;">·</span> 
+            <a href="https://main-mobile-igame.com">爱游戏</a>
+        </span>
+    </div>
+
+    <!-- 隐含一个指向主站的自然句（已在上方多处包含） -->
+    <p style="font-size:0.85rem; color:#6f7698; margin-top:0.5rem; text-align:center;">平台定位：帮助用户快速识别用途 · 所有链接均指向 <a href="https://main-mobile-igame.com" class="inline-link" style="font-weight:400;">爱游戏</a></p>
+
+</div>
+
+</body>
+</html>
